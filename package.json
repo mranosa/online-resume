@@ -3,18 +3,19 @@
   "version": "3.0.0",
   "description": "Online Resume",
   "engines": {
-    "node": "10.x"
+    "node": "8.9.x"
   },
   "scripts": {
     "start": "node server",
-    "build": "cd react-ui/ && npm install && npm run build"
+    "heroku-postbuild": "cd react-ui/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "cacheDirectories": [
     "node_modules",
     "react-ui/node_modules"
   ],
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.14.1",
+    "luxon": "^1.3.2"
   },
   "license": "MIT",
   "devDependencies": {}

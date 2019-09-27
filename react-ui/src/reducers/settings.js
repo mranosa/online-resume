@@ -1,4 +1,4 @@
-import APPCONFIG from 'constants/appConfig';
+import APPCONFIG from '../theme/constants/Config';
 import {
   TOGGLE_BOXED_LAYOUT,
   TOGGLE_COLLAPSED_NAV,
@@ -7,7 +7,7 @@ import {
   CHANGE_SIDEBAR_WIDTH,
   CHANGE_COLOR_OPTION,
   CHANGE_THEME
-} from '../constants/actionTypes';
+} from '../theme/constants/ActionTypes';
 
 const initialSettings = APPCONFIG.settings;
 

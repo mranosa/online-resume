@@ -5,7 +5,6 @@ import AquisitionChart from './AquisitionChart';
 import StatBoxes from './StatBoxes';
 import EngagementStats from './EngagementStats';
 import BenchmarkChart from './BenchmarkChart';
-import './styles.scss';
 
 const Main = () => (
   <div className="row">
@@ -71,10 +70,10 @@ const Engagement = () => (
 );
 
 const Dashboard = () => (
-  <div className="container-fluid no-breadcrumb page-dashboard">
+  <div className="container-fluid no-breadcrumbs page-dashboard">
 
     <QueueAnim type="bottom" className="ui-animate">
-      <div key="1"><Main /></div>
+      <Main />
       <div key="2"><StatBoxes /></div>
       <div key="3"><Engagement /></div>
     </QueueAnim>

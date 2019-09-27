@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactEcharts from 'echarts-for-react';
-import 'echarts/theme/macarons';
-import chartConfig from 'constants/chartConfig';
+import ReactEcharts from '../../../../../components/ReactECharts';
+import CHARTCONFIG from '../../../../../theme/constants/ChartConfig';
 
 const radar = {};
 radar.options = {
@@ -11,7 +10,7 @@ radar.options = {
     y: 'bottom',
     data: ['Industry Average', 'Our Company'],
     textStyle: {
-      color: chartConfig.color.text
+      color: CHARTCONFIG.color.text
     }
   },
   toolbox: {
@@ -34,7 +33,7 @@ radar.options = {
       splitArea: {
         show: true,
         areaStyle: {
-          color: chartConfig.color.splitArea
+          color: CHARTCONFIG.color.splitArea
         }
       },
       indicator: [
@@ -58,7 +57,7 @@ radar.options = {
           name: 'Industry Average',
           itemStyle: {
             normal: {
-              color: chartConfig.color.success
+              color: CHARTCONFIG.color.success
             }
           }
         },
@@ -67,7 +66,7 @@ radar.options = {
           name: 'Our Company',
           itemStyle: {
             normal: {
-              color: chartConfig.color.info
+              color: CHARTCONFIG.color.info
             }
           }
         }
@@ -78,7 +77,7 @@ radar.options = {
 
 
 const Chart = () => (
-  <ReactEcharts option={radar.options} showLoading={false} theme={"macarons"} />
+  <ReactEcharts option={radar.options} showLoading={false} />
 );
 
 export default Chart;

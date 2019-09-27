@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactEcharts from 'echarts-for-react';
-import 'echarts/theme/macarons';
+import ReactEcharts from '../../../../../components/ReactECharts';
 
 const data = [{
   value: 350,
@@ -66,7 +65,7 @@ pie.options = {
 };
 
 const Chart = () => (
-  <ReactEcharts style={{height: '400px'}} option={pie.options} showLoading={false} theme={"macarons"} />
+  <ReactEcharts style={{height: '400px'}} option={pie.options} showLoading={false} />
 );
 
 export default Chart;

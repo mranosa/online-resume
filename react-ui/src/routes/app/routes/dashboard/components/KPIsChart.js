@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactEcharts from 'echarts-for-react';
-import 'echarts/theme/macarons';
-import chartConfig from 'constants/chartConfig';
+import ReactEcharts from '../../../../../components/ReactECharts'
+import CHARTCONFIG from '../../../../../theme/constants/ChartConfig';
 
 const area = {};
 area.options = {
@@ -11,7 +10,7 @@ area.options = {
   legend: {
     data: ['Acquisition', 'Revenue'],
     textStyle: {
-      color: chartConfig.color.text
+      color: CHARTCONFIG.color.text
     }
   },
   toolbox: {
@@ -24,12 +23,12 @@ area.options = {
       data: ['Jan.', 'Feb.', 'Mar.', 'Apr.', 'May.', 'Jun.', 'Jul.', 'Aug.'],
       axisLabel: {
         textStyle: {
-          color: chartConfig.color.text
+          color: CHARTCONFIG.color.text
         }
       },
       splitLine: {
         lineStyle: {
-          color: chartConfig.color.splitLine
+          color: CHARTCONFIG.color.splitLine
         }
       }
     }
@@ -39,18 +38,18 @@ area.options = {
       max: 100,
       axisLabel: {
         textStyle: {
-          color: chartConfig.color.text
+          color: CHARTCONFIG.color.text
         }
       },
       splitLine: {
         lineStyle: {
-          color: chartConfig.color.splitLine
+          color: CHARTCONFIG.color.splitLine
         }
       },
       splitArea: {
         show: true,
         areaStyle: {
-          color: chartConfig.color.splitArea
+          color: CHARTCONFIG.color.splitArea
         }
       }
     }
@@ -62,17 +61,17 @@ area.options = {
       data: [17, 11, 22, 35, 76, 40, 28, 25],
       itemStyle: {
         normal: {
-          color: chartConfig.color.info
+          color: CHARTCONFIG.color.info
         }
       },
       lineStyle: {
         normal: {
-          color: chartConfig.color.info
+          color: CHARTCONFIG.color.info
         }
       },
       areaStyle: {
         normal: {
-          color: chartConfig.color.info
+          color: CHARTCONFIG.color.info
         }
       },
       symbol: 'diamond'
@@ -84,17 +83,17 @@ area.options = {
       data: [15, 13, 20, 40, 81, 37, 26, 26],
       itemStyle: {
         normal: {
-          color: chartConfig.color.success
+          color: CHARTCONFIG.color.success
         }
       },
       lineStyle: {
         normal: {
-          color: chartConfig.color.success
+          color: CHARTCONFIG.color.success
         }
       },
       areaStyle: {
         normal: {
-          color: chartConfig.color.success
+          color: CHARTCONFIG.color.success
         }
       },
       symbol: 'diamond'

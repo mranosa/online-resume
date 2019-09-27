@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactEcharts from 'echarts-for-react';
-import 'echarts/theme/macarons';
-import chartConfig from 'constants/chartConfig';
+import ReactEcharts from '../../../../../components/ReactECharts';
+import CHARTCONFIG from '../../../../../theme/constants/ChartConfig';
 
 // Engagment pie charts
 const labelTop = {
@@ -18,13 +17,13 @@ const labelTop = {
 };
 // const labelTop = {
 //     normal : {
-//         color: chartConfig.color.info,
+//         color: CHARTCONFIG.color.info,
 //         label : {
 //             show : true,
 //             position : 'center',
 //             formatter : '{b}',
 //             textStyle: {
-//                 color: chartConfig.color.text,
+//                 color: CHARTCONFIG.color.text,
 //                 baseline : 'bottom',
 //                 fontSize: 14
 //             }
@@ -37,7 +36,6 @@ const labelTop = {
 const labelFromatter = {
   normal: {
     label: {
-      position:'center',
       formatter(params) {
         return `${100 - params.value}%`;
       },
@@ -62,6 +60,7 @@ const labelBottom = {
   }
 };
 const radius = [65, 70];
+const pie = {};
 
 const pie1 = {};
 const pie2 = {};
@@ -74,8 +73,8 @@ pie1.options = {
     radius,
     itemStyle: labelFromatter,
     data: [
-      {name: 'Bounce', value: 36, label: labelTop, labelLine: {normal: {show: false}}, itemStyle: {normal: {color: chartConfig.color.success}}},
-      {name: 'other', value: 64, itemStyle: labelBottom}
+            {name: 'Bounce', value: 36, label: labelTop, labelLine: {normal: {show: false}}, itemStyle: {normal: {color: CHARTCONFIG.color.success}}},
+            {name: 'other', value: 64, itemStyle: labelBottom}
     ]
   }]
 };
@@ -86,8 +85,8 @@ pie2.options = {
     radius,
     itemStyle: labelFromatter,
     data: [
-      {name: 'Activation', value: 45, label: labelTop, itemStyle: {normal: {color: chartConfig.color.info}}},
-      {name: 'other', value: 55, itemStyle: labelBottom}
+            {name: 'Activation', value: 45, label: labelTop, itemStyle: {normal: {color: CHARTCONFIG.color.info}}},
+            {name: 'other', value: 55, itemStyle: labelBottom}
     ]
   }]
 };
@@ -97,8 +96,8 @@ pie3.options = {
     radius,
     itemStyle: labelFromatter,
     data: [
-      {name: 'Retention', value: 25, label: labelTop, itemStyle: {normal: {color: chartConfig.color.success}}},
-      {name: 'other', value: 75, itemStyle: labelBottom}
+            {name: 'Retention', value: 25, label: labelTop, itemStyle: {normal: {color: CHARTCONFIG.color.success}}},
+            {name: 'other', value: 75, itemStyle: labelBottom}
     ]
   }]
 };
@@ -108,8 +107,8 @@ pie4.options = {
     radius,
     itemStyle: labelFromatter,
     data: [
-      {name: 'Referral', value: 75, label: labelTop, itemStyle: {normal: {color: chartConfig.color.info}}},
-      {name: 'other', value: 25, itemStyle: labelBottom}
+            {name: 'Referral', value: 75, label: labelTop, itemStyle: {normal: {color: CHARTCONFIG.color.info}}},
+            {name: 'other', value: 25, itemStyle: labelBottom}
     ]
   }]
 };

@@ -6,6 +6,7 @@ import Sidenav from '../../../components/Sidenav';
 import Footer from '../../../components/Footer';
 
 import Dashboard from '../routes/dashboard/'
+import Career from '../routes/career/'
 
 function LoadingComponent() {
   return <div></div>;
@@ -28,6 +29,7 @@ class MainApp extends React.Component {
             <div className="app-content">
               <div className="full-height">
                   <Route path={`${match.url}/dashboard`} component={Dashboard} />
+                  <Route path={`${match.url}/career`} component={Career} />
               </div>
             </div>
 

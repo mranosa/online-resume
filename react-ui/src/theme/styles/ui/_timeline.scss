@@ -1,12 +1,12 @@
 $TL_content_bg:     rgba(255,255,255,.9);
 $Theme_dark_TL_content_bg: rgba(255,255,255,.05);
 
-.ui-timline-container {
+.ui-timeline-container {
   padding: 15px;
 }
 
-// 1 remove .alt of .tl-item, 2 add .ui-timline-left to .ui-timline-container
-.ui-timline-left {
+// 1 remove .alt of .tl-item, 2 add .ui-timeline-left to .ui-timeline-container
+.ui-timeline-left {
   .ui-timeline {
     &:before {
       left: 0;
@@ -83,7 +83,7 @@ $Theme_dark_TL_content_bg: rgba(255,255,255,.05);
 
     &.alt {
       @media (min-width: map-get($grid-breakpoints, md)) {
-        text-align: right;
+        
         &:before {
           display: none;
         }
@@ -136,7 +136,7 @@ $Theme_dark_TL_content_bg: rgba(255,255,255,.05);
         top: 0;
         width: 150px;
         color: $gray-light;
-        line-height: 35px;
+        margin-top: 10px;
         text-align: right;
         @media (min-width: map-get($grid-breakpoints, md)) {
           left: -220px;

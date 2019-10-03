@@ -7,11 +7,7 @@ import Footer from '../../../components/Footer';
 
 import Dashboard from '../routes/dashboard/'
 import Career from '../routes/career/'
-
-function LoadingComponent() {
-  return <div></div>;
-}
-
+import BattleStation from '../routes/battlestation/'
 
 class MainApp extends React.Component {
 
@@ -27,9 +23,10 @@ class MainApp extends React.Component {
 
           <div className="app-content-wrapper">
             <div className="app-content">
-              <div className="full-height">
+              <div className="h-100">
                   <Route path={`${match.url}/dashboard`} component={Dashboard} />
                   <Route path={`${match.url}/career`} component={Career} />
+                  <Route path={`${match.url}/workstations`} component={BattleStation} />
               </div>
             </div>
 

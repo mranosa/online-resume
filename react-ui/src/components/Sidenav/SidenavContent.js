@@ -94,9 +94,9 @@ class SidebarContent extends React.Component {
       <ul className="nav" ref={(c) => { this.nav = c; }}>
         <li className="nav-header"><span>Navigation</span></li>
         <li><FlatButton href="#/app/about"><i className="nav-icon material-icons">face</i><span className="nav-text">About Me</span></FlatButton></li>
+        <li><FlatButton href="#/app/career"><i className="nav-icon material-icons">work</i><span className="nav-text">Career History</span></FlatButton></li>
         <li><FlatButton href="#/app/workstations"><i className="nav-icon material-icons">computer</i><span className="nav-text">Battlestations</span></FlatButton></li>
         <li><FlatButton href="#/app/books"><i className="nav-icon material-icons">books</i><span className="nav-text">Book List</span></FlatButton></li>
-        <li><FlatButton href="#/app/career"><i className="nav-icon material-icons">work</i><span className="nav-text">Career History</span></FlatButton></li>
         <li><FlatButton href="#/app/goals"><i className="nav-icon material-icons">list</i><span className="nav-text">Aspirations</span></FlatButton></li>
         <li><FlatButton href="#/app/story"><i className="nav-icon material-icons">theaters</i><span className="nav-text">Life Story</span></FlatButton></li>
         <li><FlatButton href="#/app/projects"><i className="nav-icon material-icons">assignment_turned_in</i><span className="nav-text">Pet Projects</span></FlatButton></li>

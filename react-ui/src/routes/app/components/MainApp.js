@@ -8,6 +8,7 @@ import Footer from '../../../components/Footer';
 import Dashboard from '../routes/dashboard/'
 import Career from '../routes/career/'
 import BattleStation from '../routes/battlestation/'
+import Books from '../routes/books/'
 
 class MainApp extends React.Component {
 
@@ -27,6 +28,7 @@ class MainApp extends React.Component {
                   <Route path={`${match.url}/dashboard`} component={Dashboard} />
                   <Route path={`${match.url}/career`} component={Career} />
                   <Route path={`${match.url}/workstations`} component={BattleStation} />
+                  <Route path={`${match.url}/books`} component={Books} />
               </div>
             </div>
 

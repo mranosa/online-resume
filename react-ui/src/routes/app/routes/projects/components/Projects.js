@@ -1,11 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import QueueAnim from 'rc-queue-anim';
+import './styles.scss';
 
-
-
-class Career extends React.Component {
-  state = {
-    technologies: {
+const technologies = {
       'js': {
         title: 'Javascript',
         thumbnail: 'https://img.stackshare.io/service/1209/javascript.jpeg'
@@ -239,275 +236,143 @@ class Career extends React.Component {
         title: 'Scala',
         thumbnail: 'data:image/png;base64,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'
       },
-    },
-    careerItems: [{
-      company: 'SignZen',
-      title: 'Founder',
-      totalDuration: '(3 months)',
-      monthRange: 'Jul 2019 – Sep 2019',
-      workType: 'Startup Venture',
-      contributions: [
-        'Set strategy and vision.',
-        'Managed and built initial product.',
-        'Built the initial team.',
-        'Managed and set team expectations and deliverables.',
-        'Validated idea against prospective clients.',
-        'Gained two prospective clients after two weeks of validation.'
-      ],
-      technologies: [
-        'js', 'node', 'git',
-        'react', 'firebase', 'heroku', 
-        'python', 'tensorflow', 'keras',
-        'pytorch', 'bitbucket', 'vlc'
-      ]
-    }, {
-      company: 'Branded Entertainment Network',
-      title: 'Software Test Engineer',
-      totalDuration: '(3 years and 3 months)',
-      monthRange: 'Apr 2016 – Jun 2019',
-      workType: 'Remote',
-      contributions: [
-        'Create and update automated end user tests every sprint before release.',
-        'Eliminated debugging stress from existing automated tests by introducing the Gherkin.',
-        'Reduced existing automated end user test runtime by 600%.',
-        'Reduced manual regression data preparation from 16 hours to 5 minutes.',
-        'Designed and built API test framework.',
-        'Designed and built an internal service to pipe users youtube real-time experience.'
-      ],
-      technologies: [
-        'js', 'node', 'protractor',
-        'webdriver', 'jasmine', 'mocha',
-        'mongo', 'git', 'vagrant', 'ffmpeg'
-      ]
-    }, {
-      company: 'InnoVint',
-      title: 'Software Test Engineer',
-      totalDuration: '(1 year and 3 months)',
-      monthRange: 'Jan 2015 – Mar 2016',
-      workType: 'Remote',
-      contributions: [
-        'Designed, built and automated end user tests.',
-      ],
-      technologies: [
-        'js', 'node', 'protractor', 'jasmine',
-        'git', 'vagrant', 'ffmpeg',
-        'angular', 'grunt', 'bower'
-      ]
-    }, {
-      company: 'Black Marlin Data Corp',
-      title: 'Software Engineer',
-      totalDuration: '(2 years)',
-      monthRange: 'Apr 2012 –Mar 2014',
-      workType: 'Office Based',
-      contributions: [
-        'Designed, built and refactored features for existing web and mobile application.',
-        'Ensured that deliverables are always addressed even if deadline is very tight.',
-        'Helped launched hybrid mobile application after 8 months on the project. Mobile application generated ~$250k revenue during the first month. Management team members got promotions on the next month.',
-        'Improved overall code performance which reduced average page load time from 3~8 minutes to 2~5 seconds.',
-        'Constantly improved existing application by suggesting new ideas, testing out new technologies and prototyping new solutions. New and some existing projects then implemented AngularJS, as a front end framework choice.'
-      ],
-      technologies: [
-        'js', 'git', 'angular', 'bower',
-        'java', 'sencha', 'spring', 'spring-boot',
-        'hibernate', 'selenium', 'maven', 'subversion'
-      ]
-    }, {
-      company: 'Zappli',
-      title: 'Software Engineer',
-      totalDuration: '(1 year and 2 months)',
-      monthRange: 'Mar 2011 – Apr 2012',
-      workType: 'Remote',
-      contributions: [
-        'Fixed bugs, built and integrated new features for existing web and mobile application.'
-      ],
-      technologies: [
-        'java', 'js', 'git', 'spring', 
-        'hibernate', 'jquery', 'cxf', 'mysql'
-      ]
-    }, {
-      company: 'Fabulous Apps LLC',                                                        
-      title: 'Software Engineer',
-      totalDuration: '(2 years)',
-      monthRange: 'May 2009 – Mar 2011',
-      workType: 'Remote',
-      contributions: [
-        'Independently designed, built and deployed web applications.',
-        'Constantly managed expectations from product owner.'
-      ],
-      technologies: [
-        'java', 'js', 'git', 'spring', 
-        'jquery', 'angular', 'maven', 'mysql',
-        'scriptaculous', 'app-engine', 'bigtable', 'ant'
-      ]
-    }, {
-      company: 'Orange and Bronze Software Labs',
-      title: 'Junior Software Engineer',
-      totalDuration: '(1 year and 4 months)',
-      monthRange: 'Mar 2009 – Jun 2010',
-      workType: 'Office Based',
-      contributions: [
-        'Designed, built and integrated features for new and existing web applications.',
-        'Ensured that deliverables are always addressed even if deadline is tight.'
-      ],
-      technologies: [
-        'java', 'js', 'git', 'spring', 
-        'jquery', 'maven', 'mysql', 'ant',
-        'hibernate', 'struts', 'appfuse', 'oracle'
-      ]
-    }, {
-      company: 'IVANT Technologies',
-      title: 'J2EE Consultant',
-      totalDuration: '(3 months)',
-      monthRange: 'Jan 2009 – Mar 2009',
-      workType: 'Office Based',
-      contributions: [
-        'Built shopping cart feature for existing platform.'
-      ],
-      technologies: [
-        'java', 'struts', 'spring', 'hibernate', 'subversion'
-      ]
-    }, {
-      company: 'Azeus Systems Philippines',
-      title: 'Junior Associate',
-      totalDuration: '(7 months)',
-      monthRange: 'Jun 2008 – Dec 2008',
-      workType: 'Office Based',
-      contributions: [
-        'Helped company cut cost by developing a database synchronization tool for remote and local databases, along with another developer.'
-      ],
-      technologies: [
-        'java', 'js', 'scriptaculous',
-        'sqlite', 'subversion', 'oracle'
-      ]
-    }, {
-      company: 'Alarius Systems LLC',
-      title: 'Junior J2EE Developer',
-      totalDuration: '(1 year and 1 month)',
-      monthRange: 'Jan 2006 – Feb 2007',
-      workType: 'Office Based',
-      contributions: [
-        'Designed, built, integrated and deployed J2EE applications.',
-        'Optimized subroutines to improve performance of projects by 20% to 50%.',
-        'Reviewed codes, fixed bugs, improved documentation and code on a daily basis, along with two other developers.'
-      ],
-      technologies: [
-        'java', 'struts', 'subversion'
-      ]
-    }, {
-      company: '',
-      title: 'Freelance Software Engineer',
-      totalDuration: '(15 years and counting)',
-      monthRange: 'Jun 2004 - Present',
-      workType: 'Office Based',
-      contributions: [
-        'Created / Sold / Assisted classmates, schoolmates, other university students, local politicians, startup founders and other product owners in their web and desktop software projects.',
-        'Handled local and international clients.',
-      ],
-      technologies: [
-        'js', 'node', 'protractor', 'webdriver', 'jasmine', 'mocha', 'mongo',
-        'git', 'vagrant', 'ffmpeg', 'react', 'firebase', 'heroku', 'python',
-        'tensorflow', 'keras', 'pytorch', 'bitbucket', 'vlc', 'opencv',
-        'angular', 'grunt', 'bower', 'java', 'sencha', 'spring',
-        'spring-boot', 'hibernate', 'selenium', 'maven', 'subversion',
-        'jquery', 'cxf', 'mysql', 'scriptaculous', 'app-engine', 
-        'bigtable', 'ant', 'struts', 'appfuse', 'oracle', 'sqlite',
-        'c++', 'bootstrap', 'cordova', 'guice', 'ibatis',
-        'neo4j', 'firebase', 'elasticsearch', 'yeoman', 'play',
-        'github', 'cloudfoundry', 'flash', 'vb6', 'stripes', 'scala'
-      ]
-    }]
+    };
+
+const posts = [
+  {
+    title: 'SignZen',
+    description: 'Pay per Gaze Indoor Ad Platform',
+    category: 'Startup Idea',
+    status: 'Ongoing',
+    ribbon: 'ribbon-info',
+    technologies: [
+      'js', 'node', 'git',
+      'react', 'firebase', 'heroku', 
+      'python', 'tensorflow', 'keras',
+      'pytorch', 'bitbucket', 'vlc'
+    ]
+  },
+  {
+    title: 'generator-angular-mobile',
+    description: 'Yeoman generator for protractor end user tests',
+    category: 'Tooling',
+    status: 'Done',
+    ribbon: 'ribbon-success',
+    technologies: [
+      'js', 'node', 'yeoman', 'bower',
+      'grunt', 'github', 'git', 'heroku'
+    ]
+  },
+  {
+    title: 'PageBoy',
+    description: 'Web and mobile platform for brick and mortar stores to easily accept orders from nearby buyers',
+    category: 'Startup Idea',
+    status: 'Failed',
+    ribbon: 'ribbon-danger',
+    technologies: [
+      'js', 'node', 'bootstrap', 'angular',
+      'firebase', 'yeoman', 'bower', 'grunt',
+      'bitbucket', 'git', 'heroku', 'elasticsearch'
+    ]
+  },
+  {
+    title: 'Souvenir.ph',
+    description: 'E-commerce platform for souvenir shops',
+    category: 'Startup Idea',
+    status: 'Failed',
+    ribbon: 'ribbon-danger',
+    technologies: [
+      'js', 'node', 'bootstrap', 'angular',
+      'firebase', 'yeoman', 'bower', 'grunt',
+      'bitbucket', 'git', 'heroku'
+    ]
+  },
+  {
+    title: 'generator-angular-mobile',
+    description: 'Yeoman generator for cordova projects',
+    category: 'Tooling',
+    status: 'Done',
+    ribbon: 'ribbon-success',
+    technologies: [
+      'js', 'node', 'bootstrap', 'angular', 
+      'cordova', 'yeoman', 'bower', 'grunt',
+      'github', 'git', 'heroku'
+    ]
+  },
+  {
+    title: 'Trankeelo',
+    description: 'Web and mobile sales and inventory management software for small and medium business',
+    category: 'Startup Idea',
+    status: 'Failed',
+    ribbon: 'ribbon-danger',
+    technologies: [
+      'js', 'node', 'bootstrap', 'angular',
+      'firebase', 'yeoman', 'bower', 'grunt',
+      'bitbucket', 'git', 'heroku'
+    ]
+  },
+  {
+    title: 'Frizzle',
+    description: 'Room centric dating platform for single professionals',
+    category: 'Startup Idea',
+    status: 'Failed',
+    ribbon: 'ribbon-danger',
+    technologies: [
+      'scala', 'js', 'play', 'bootstrap',
+      'angular', 'neo4j', 'firebase',
+      'yeoman', 'bower', 'grunt',
+      'bitbucket', 'git', 'heroku'
+    ]
   }
-  
+];
+
+class Projects extends React.Component {
+  state = {
+    posts, technologies,
+  };
+
   render() {
     return (
-      <div className="ui-timeline-container">
-        <section className="ui-timeline">
-          <article className="tl-item">
-            <div className="tl-body">
-              <div className="tl-entry">
-                <div className="tl-caption">
-                  <a href="" className="btn btn-primary btn-block">Present</a>
-                </div>
-              </div>
-            </div>
-          </article>
-
+      <section className="page-blog container-fluid no-breadcrumb container-mw-md chapter col-md-6">
+        <QueueAnim type="bottom" className="ui-animate">
           {
-            this.state.careerItems.map((careerItem, index) => {
-              return (
-                <article className={ index % 2 === 0 ? 'tl-item' : 'tl-item alt' }>
-                  <div className="tl-body">
-                    <div className="tl-entry">
-                      <div className="tl-time">
-                        <span style={{fontWeight:'bolder'}}>{careerItem.monthRange}</span>
-                        <br />
-                        <span>{careerItem.totalDuration}</span>
-                        <br />
-                        <span style={{color: '#979898', fontSize: '12px'}}>{careerItem.workType}</span>
-                      </div>
-                      <div className="tl-icon btn-icon-round btn-icon btn-icon-thin btn-info"><i className="material-icons">camera</i></div>
-                      <div className="tl-content">
-                        <h4 className="tl-tile text-primary" style={{marginTop: 'unset'}}>
-                          <strong>{careerItem.title}</strong>
-                          <br /> 
-                          <span style={{fontSize:'16px'}}>{careerItem.company}</span>
-                        </h4>
+            this.state.posts.map((post, index) => (
+              <article className="blog-item" key={index}>
 
-                        {
-                          careerItem.contributions.map((contribution) => {
-                            return (
-                              <li>{contribution}</li>
-                            )
-                          })
-                        }
+                <div className={`box box-default ribbon-container ${post.ribbon}`}>
+                  <div class="ribbon-wrapper"><div class="ribbon"> {post.status} </div></div>
+                  <div className="box-body">
+                    <h2>{post.title}</h2>
+                    <div className="blog-info">
+                      <span className="category">{post.category}</span>
+                    </div>
+                    <p className="desc">{post.description}</p>
 
-                        <br />
-                        Technologies Used:
-                        <div className='row' style={{paddingLeft: '15px'}}>
-
-                          {
-                            careerItem.technologies.map((technology) => {
-                              return (
-                                <div className="text-center" style={{minWidth: '55px', maxWidth:'80px', float:'left'}}>
-                                  <img width='50' height='50' src={this.state.technologies[technology].thumbnail} alt="boohoo" className="img-responsive"/>
-                                  <br />
-                                  <span style={{fontSize:'10px', color:'gray', width:'100%'}}>{this.state.technologies[technology].title}</span>
-                                </div>
-                              )
-                            })
-                          }
-
-                        </div>
-                      </div>
+                    <br />
+                    Technologies Used:
+                    <div className='row' style={{paddingLeft: '15px'}}>
+                      {
+                        post.technologies.map((technology) => {
+                          return (
+                            <div className="text-center" style={{minWidth: '55px', maxWidth:'80px', float:'left'}} style={{background: 'white'}}>
+                              <img width='50' height='50' src={this.state.technologies[technology].thumbnail} alt="boohoo" className="img-responsive" style={{padding: '5px'}}/>
+                              <br />
+                              <span style={{fontSize:'10px', color:'gray', width:'100%'}}>{this.state.technologies[technology].title}</span>
+                            </div>
+                          )
+                        })
+                      }
                     </div>
                   </div>
-                </article>
-              );
-            })
-          }
-
-          <article className="tl-item">
-            <div className="tl-body">
-              <div className="tl-entry">
-                <div className="tl-caption">
-                  <a href="" className="btn btn-success btn-block">Career Start</a>
                 </div>
-              </div>
-            </div>
-          </article>
-
-        </section>
-      </div>
+              </article>
+            ))
+          }
+        </QueueAnim>
+      </section>
     );
   }
 }
 
-const Page = () => (
-  <div className="container-fluid container-mw-xl chapter">
-    <QueueAnim type="bottom" className="ui-animate">
-      <div key="1"><Career /></div>
-    </QueueAnim>
-  </div>
-);
+export default Projects;
 
-export default Page;

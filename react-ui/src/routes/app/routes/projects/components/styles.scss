@@ -1,0 +1,184 @@
+@import "../../../../../theme/styles/variables";
+
+.container-fluid.page-blog {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.blog-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.117647);
+  margin-top: 70px;
+  padding: 70px 0 10px;
+  &:first-child {
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 35px;
+    line-height: 1;
+    a {
+      color: $body-color;
+      font-weight: $font-weight-light;
+      text-decoration: none;
+    }
+  }
+
+  .blog-info {
+    margin: 10px 0;
+
+    > span {
+      margin-right: 8px;
+    }
+
+    .avatar {
+      width: 30px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .date {
+      opacity: .7;
+    }
+
+    .category {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: $border-radius;
+      background-color: rgba(#000, .08);
+
+      a {
+        color: $body-color;
+        text-decoration: none;
+        opacity: .7;
+      }
+    }
+  }
+
+  .desc {
+    font-size: 16px;
+    opacity: .7;
+  }
+}
+
+
+
+.theme-gray,
+.theme-dark {
+  .blog-item {
+    h2 a {
+      color: $theme_dark_text_color;
+    }
+    .blog-info {
+      .category a {
+        color: $theme_dark_text_color;
+      }
+    }
+  }
+}
+
+@mixin ribbon-variant($color) {
+  .ribbon {
+    background-color: $color;
+    &:before,
+    &:after {
+      border-top: 2px solid $color;
+    }
+  }
+}
+
+.ribbon-container {
+  position: relative;
+  display: block; // when used on inline elements like `a`
+
+  .ribbon-wrapper {
+    position: absolute;
+    overflow: hidden;
+    width: 85px;
+    height: 88px;
+    top: -3px;
+    right: -3px;
+  }
+
+  .ribbon {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: $white;
+    transform: rotate(45deg);
+    padding: 7px 0;
+    left: -5px;
+    top: 15px;
+    width: 120px;
+    line-height: 20px;
+    background-color: $gray-700;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      line-height: 0;
+      border-top: 2px solid $gray-700;
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
+      bottom: -2px;
+    }
+    &:before {
+      left: 0;
+      bottom: -1px;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+
+$blue:    #2196F3 !default; // Blue 500
+$indigo:  #6610f2 !default;
+$purple:  #7E57C2 !default; // Deep Purple 400
+$pink:    #e83e8c !default;
+$red:     #EF5350 !default; // Red 400
+$orange:  #FFCA28 !default; // Amber 400
+$yellow:  #ffc107 !default;
+$green:   #66BB6A !default; // Green 400
+$teal:    #20c997 !default;
+$cyan:    #00BCD4 !default; // Cyan 500
+
+$colors: () !default;
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan,
+    "white":      $white,
+    "gray":       $gray-600,
+    "gray-dark":  $gray-800
+  ), $colors
+);
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+  // color
+  &.ribbon-primary { @include ribbon-variant ($primary); }
+  &.ribbon-success { @include ribbon-variant ($success); }
+  &.ribbon-info { @include ribbon-variant ($info); }
+  &.ribbon-warning { @include ribbon-variant ($warning); }
+  &.ribbon-danger { @include ribbon-variant ($danger); }
+}

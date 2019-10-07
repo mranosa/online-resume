@@ -11,6 +11,7 @@ import BattleStation from '../routes/battlestation/'
 import Books from '../routes/books/'
 import Testimonials from '../routes/testimonials/'
 import Projects from '../routes/projects/'
+import About from '../routes/about/'
 
 class MainApp extends React.Component {
 
@@ -28,6 +29,7 @@ class MainApp extends React.Component {
             <div className="app-content">
               <div className="h-100">
                   <Route path={`${match.url}/dashboard`} component={Dashboard} />
+                  <Route path={`${match.url}/about`} component={About} />
                   <Route path={`${match.url}/career`} component={Career} />
                   <Route path={`${match.url}/workstations`} component={BattleStation} />
                   <Route path={`${match.url}/books`} component={Books} />

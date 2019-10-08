@@ -15,7 +15,7 @@ const About = () => (
             </div>
             <div className="col-xl-8">              
               <div className="box box-default">
-                <div className="box-header"><h4>Hello! Bonjour! Hola! Guten Tag! Tara ika! Ciao! Namaste! Ohayo!</h4></div>
+                <div className="box-header"><h4>Hello! Bonjour! Hola! Guten Tag! Tara ika! Ciao! Konnichiwa!</h4></div>
                 <div className="box-body">
                   <p>I am polyglot hacker from the Philippines. I love code and have been at it since high school.</p>
                   <p>I have some experience under my belt, and I also love implementing my ideas on the side.</p>

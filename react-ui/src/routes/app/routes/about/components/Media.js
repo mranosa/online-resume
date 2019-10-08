@@ -30,11 +30,28 @@ function SimpleMediaCard(props) {
           style={{ minHeight: '320px' }}
         />
         <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
-            Hi! Im Ken!
+          <Typography gutterBottom variant="headline" component="h4">
+            Mark Kenneth Ranosa
           </Typography>
           <Typography component="p">
-            What to put here?
+            <span style={{'font-size':'16px'}}>Fullstack Software Engineer</span>
+            <br />
+            <br />
+            <i className="fas fa-graduation-cap"></i>
+            <span>
+              <i style={{'vertical-align':'middle'}} className="material-icons">home</i>
+              &nbsp;Manila, Philippines
+            </span>
+            <br />
+            <span>
+              <i style={{'vertical-align':'middle'}} className="material-icons">school</i>
+              &nbsp;AMA Computer College, 2010
+            </span>
+            <br />
+            <span>
+              <i style={{'vertical-align':'middle'}} className="material-icons">email</i>
+              &nbsp;ken.ranosa@gmail.com
+            </span>
           </Typography>
         </CardContent>
       </Card>

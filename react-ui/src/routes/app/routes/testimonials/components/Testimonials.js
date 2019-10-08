@@ -14,7 +14,6 @@ const testimonials = [
     contents: [
       'Ken played a key role in ensuring platform stability as we rolled out new features and grew the platform.',
       'His work ethic is extremely strong and proved to be a person easy for everyone to get along with.',
-      'It was nice to work with Ken in BEN.',
       'We had concerns regarding bringing a team member into a small team from so many timezones away but this was proven to be a non-issue. I attribute this to his aforementioned work ethic and accountability.',
       'Ken will make a good addition to any team.',
     ],

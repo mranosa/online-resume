@@ -12,6 +12,7 @@ import Books from '../routes/books/'
 import Testimonials from '../routes/testimonials/'
 import Projects from '../routes/projects/'
 import About from '../routes/about/'
+import FAQs from '../routes/faqs/'
 
 class MainApp extends React.Component {
 
@@ -35,6 +36,7 @@ class MainApp extends React.Component {
                   <Route path={`${match.url}/books`} component={Books} />
                   <Route path={`${match.url}/recommendations`} component={Testimonials} />
                   <Route path={`${match.url}/projects`} component={Projects} />
+                  <Route path={`${match.url}/faqs`} component={FAQs} />
               </div>
             </div>
 

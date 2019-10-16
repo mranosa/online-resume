@@ -6,9 +6,12 @@ const books = [
   {
     name: 'Ultralearning',
     author: 'Scott Young',
-    sash: 'sash-info',
-    sash_icon: 'autorenew',
-    sash_text: 'In Progress',
+    // sash: 'sash-info',
+    // sash_icon: 'autorenew',
+    // sash_text: 'In Progress',
+    sash: '',
+    sash_icon: 'done',
+    sash_text: 'Done',
     img: 'https://m.media-amazon.com/images/I/51D5dwBcSFL._SL500_.jpg',
   }, {
     name: 'Psycho-Cybernetics',

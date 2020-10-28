@@ -11,7 +11,7 @@ class Header extends React.Component {
   componentDidMount() {
     const sidebarToggler = this.sidebarBtn;
     const $sidebarToggler = $(sidebarToggler);
-    const $body = $('#body');
+    const $body = $('body');
 
     $sidebarToggler.on('click', (e) => {
       // _sidebar.scss, _page-container.scss
@@ -44,13 +44,6 @@ class Header extends React.Component {
             <h2><Link to="/">{APPCONFIG.brand}</Link></h2>
           </div>
 
-          <div className="top-nav-left d-none d-lg-inline-block d-xl-inline-block">
-            <NavLeftList />
-          </div>
-
-          <div className="top-nav-right">
-            <NavRightList />
-          </div>
         </div>
       </section>
     );

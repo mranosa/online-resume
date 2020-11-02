@@ -29,25 +29,24 @@ function SimpleMediaCard(props) {
           style={{ minHeight: '320px' }}
         />
         <CardContent>
-          <Typography gutterBottom variant="headline" component="h4">
+          <Typography style={{'font-size':'19px'}} gutterBottom variant="headline" component="h5">
             Mark Kenneth Ranosa
+            <br />
+            <span style={{'font-size':'14px', 'font-weight':'normal'}}>Fullstack Software Engineer</span>
           </Typography>
           <Typography component="p">
-            <span style={{'font-size':'16px'}}>Fullstack Software Engineer</span>
-            <br />
-            <br />
             <i className="fas fa-graduation-cap"></i>
-            <span>
+            <span style={{'font-size':'12px'}}>
               <i style={{'vertical-align':'middle'}} className="material-icons">home</i>
               &nbsp;Manila, Philippines
             </span>
             <br />
-            <span>
+            <span style={{'font-size':'12px'}}>
               <i style={{'vertical-align':'middle'}} className="material-icons">school</i>
               &nbsp;AMA Computer College, 2010
             </span>
             <br />
-            <span>
+            <span style={{'font-size':'12px'}}>
               <i style={{'vertical-align':'middle'}} className="material-icons">email</i>
               &nbsp;ken.ranosa@gmail.com
             </span>

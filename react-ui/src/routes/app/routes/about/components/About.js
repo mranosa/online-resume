@@ -22,7 +22,7 @@ const About = () => (
                 <div className="box-body">
                   <p>I am polyglot hacker from the Philippines. I love code and have been at it since high school.</p>
                   <p>I have some experience under my belt, and I also love implementing my ideas on the side.</p>
-                  <p>My main drive in life is to use my skills to move mankind forward. The more I can contribute, the more I am driven, passionate and committed.</p>
+                  <p>My main drive in life is to use my skills to be of service. The more I can contribute, the more I am driven, passionate and committed.</p>
                   <p>I consider myself as a jack of all trade and a master of none (for now).
                   I want to experience the whole technical spectrum.</p>
                   <p>I love taking my time to enjoy the process, and constantly improve myself and my workflow along the way.</p>

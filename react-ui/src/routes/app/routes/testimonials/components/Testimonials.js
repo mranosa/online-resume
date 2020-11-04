@@ -7,7 +7,7 @@ const testimonials = [
       'It was nice to work with Ken in BEN.',
       'The work he did, helped identifying lots of bugs specially during big refactoring / breaking changes of the code.',
     ],
-    avatar: 'https://media.licdn.com/dms/image/C4D03AQFcpwI4oMSURw/profile-displayphoto-shrink_100_100/0?e=1575504000&v=beta&t=5BJmuyhGetAhsMdK9L5RrxWzzavA9_fPPiZ9SCCZpTY',
+    avatar: 'https://media-exp1.licdn.com/dms/image/C4D03AQFcpwI4oMSURw/profile-displayphoto-shrink_100_100/0?e=1609977600&v=beta&t=oyPHmoMuuWJkmdb3gu0hDOxYh98FKfA-4FD_ITi25MM',
     name: 'Peter Milan',
     title: 'Software Engineer at Branded Entertainment Network'
   }, {
@@ -26,7 +26,7 @@ const testimonials = [
       'Given a good amount of resources, he can probably succeed in starting up a good business.',
       'It helps that he also has some technical chops to get things started.',
     ],
-    avatar: 'https://media.licdn.com/dms/image/C5103AQH62jY4OcI0CQ/profile-displayphoto-shrink_100_100/0?e=1575504000&v=beta&t=KSqmUUgvCyg5QytQwIKJfG2ltvDYEUn6yvjTv2EAj1w',
+    avatar: 'https://media-exp1.licdn.com/dms/image/C5603AQFaV0BY0O07yQ/profile-displayphoto-shrink_100_100/0?e=1609977600&v=beta&t=VXH9zLK0DTgIUv7GqzS7yIFdCGoCS2v_LKXMMXmAsdk',
     name: 'Reginald Eli Deinla',
     title: 'Sr. Software Engr at Rocketmiles'
   }, {
@@ -35,7 +35,7 @@ const testimonials = [
       'He is a good team player and is always ready to help. He ensures that the project meets deadline.',
       'He is excited about new web technologies and likes to play with them. He makes suggestions to improve application architectures and is able to find loopholes to existing ones.',
     ],
-    avatar: 'https://media.licdn.com/dms/image/C5603AQGXDnmIhTH6Og/profile-displayphoto-shrink_100_100/0?e=1575504000&v=beta&t=MxOT7iJaRHaJVvb13BaVpdRhocEMxykHxL5gvYB092Y',
+    avatar: 'https://media-exp1.licdn.com/dms/image/C5603AQGXDnmIhTH6Og/profile-displayphoto-shrink_100_100/0?e=1609977600&v=beta&t=0KwYaEzzh02c4hq5wz79F7HUDw79_FHEFTC8ijSMzLY',
     name: 'Stefan Bernard Lavilla',
     title: 'Full Stack Java Developer at Pet Circle'
   }, {
@@ -45,7 +45,7 @@ const testimonials = [
       'He is passionate in everything that he does, loves learning the new technology, fast, reliable, efficient and easily gets a long with everyone.',
       'I HIGHLY RECOMMEND THIS GUY! All the best in your endevours!',
     ],
-    avatar: 'https://media.licdn.com/dms/image/C4E03AQHeT1iPEnNSiw/profile-displayphoto-shrink_100_100/0?e=1575504000&v=beta&t=b0-5y_fpRadIjHZpg25GGTKMHTnUNgxumU9cgr4Qn40',
+    avatar: 'https://media-exp1.licdn.com/dms/image/C4E03AQHeT1iPEnNSiw/profile-displayphoto-shrink_100_100/0?e=1609977600&v=beta&t=A7RnTsaOS2Orwwr1w4tcFkFrlVbq9_vlIWIOulkEc3Q',
     name: 'Limuel Flores',
     title: 'Senior Java Developer at Black Marlin Data Corporation'
   }, {
@@ -60,7 +60,7 @@ const testimonials = [
     contents: [
       'I have worked with Kenneth and he is good at learning new technologies and immediately using it to good use in the projects that he has worked on.',
     ],
-    avatar: 'https://media.licdn.com/dms/image/C5103AQE-P3GukXGiuA/profile-displayphoto-shrink_100_100/0?e=1575504000&v=beta&t=CplhCNyD3N_MBPN2Ll3S-8GRi-ipB-san7tw2VlRAkU',
+    avatar: 'https://media-exp1.licdn.com/dms/image/C5103AQE-P3GukXGiuA/profile-displayphoto-shrink_100_100/0?e=1609977600&v=beta&t=8TM3IPmC6YLjguiqchV1KVkH3sMg6-drzsnXtacb6K8',
     name: 'Giovanni Cruz',
     title: 'Software Engineer at Intertec International'
   }, {
@@ -69,7 +69,7 @@ const testimonials = [
       'He is a really passionate developer. He never stops trying new things to improve his craft.',
       'I am sure he will be valuable asset to any team he joins.',
     ],
-    avatar: 'https://media.licdn.com/dms/image/C5103AQHfmqNpelFtLw/profile-displayphoto-shrink_100_100/0?e=1575504000&v=beta&t=i9z3-jcY2zL1yF4w7jmLjhxJdt-y2eDBXgf3pzM6Mnw',
+    avatar: 'https://media-exp1.licdn.com/dms/image/C5103AQHfmqNpelFtLw/profile-displayphoto-shrink_100_100/0?e=1609977600&v=beta&t=JrdSWBLaPqAyDTFkJr3Sl-2-B3WTdUBN7yktihWBD_8',
     name: 'Dino Bagayaua',
     title: 'Senior Manager at RCG Global Services'
   }

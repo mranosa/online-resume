@@ -239,20 +239,47 @@ class Career extends React.Component {
         title: 'Scala',
         thumbnail: 'data:image/png;base64,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'
       },
+      'django': {
+        title: 'Django',
+        thumbnail: 'data:image/png;base64,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'
+      },
+      'aws-lambda': {
+        title: 'AWS Lambda',
+        thumbnail: 'data:image/jpeg;base64,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'
+      },
     },
     careerItems: [{
+      company: 'PearlPay',
+      title: 'Senior Software Engineer',
+      totalDuration: '(11 months)',
+      monthRange: 'Nov 2019 – Sep 2019',
+      workType: 'Office Based',
+      contributions: [
+        // 'Set strategy and vision.',
+        // 'Managed and built initial product.',
+        // 'Built the initial team.',
+        // 'Managed and set team expectations and deliverables.',
+        // 'Validated idea against prospective clients.',
+        // 'Gained two prospective clients after two weeks of validation.'
+      ],
+      technologies: [
+        'python', 'java', 'js', 'node', 'git',
+        'mysql', 'angular', 'spring', 
+        'django', 'aws-lambda'
+      ]
+    },{
       company: 'SignZen',
       title: 'Founder',
       totalDuration: '(3 months)',
       monthRange: 'Jul 2019 – Sep 2019',
       workType: 'Startup Venture',
       contributions: [
-        'Set strategy and vision.',
-        'Managed and built initial product.',
-        'Built the initial team.',
-        'Managed and set team expectations and deliverables.',
-        'Validated idea against prospective clients.',
-        'Gained two prospective clients after two weeks of validation.'
+        // 'Set strategy and vision.',
+        // 'Managed and built initial product.',
+        // 'Built the initial team.',
+        // 'Managed and set team expectations and deliverables.',
+        // 'Validated idea against prospective clients.',
+        // 'Gained two prospective clients after two weeks of validation.'
       ],
       technologies: [
         'js', 'node', 'git',
@@ -262,17 +289,17 @@ class Career extends React.Component {
       ]
     }, {
       company: 'Branded Entertainment Network',
-      title: 'Software Test Engineer',
+      title: 'Software Engineer in Test',
       totalDuration: '(3 years and 3 months)',
       monthRange: 'Apr 2016 – Jun 2019',
       workType: 'Remote',
       contributions: [
-        'Create and update automated end user tests every sprint before release.',
-        'Eliminated debugging stress from existing automated tests by introducing the Gherkin.',
-        'Reduced existing automated end user test runtime by 600%.',
-        'Reduced manual regression data preparation from 16 hours to 5 minutes.',
-        'Designed and built API test framework.',
-        'Designed and built an internal service to pipe users youtube real-time experience.'
+        // 'Create and update automated end user tests every sprint before release.',
+        // 'Eliminated debugging stress from existing automated tests by introducing the Gherkin.',
+        // 'Reduced existing automated end user test runtime by 600%.',
+        // 'Reduced manual regression data preparation from 16 hours to 5 minutes.',
+        // 'Designed and built API test framework.',
+        // 'Designed and built an internal service to pipe users youtube real-time experience.'
       ],
       technologies: [
         'js', 'node', 'protractor',
@@ -281,12 +308,12 @@ class Career extends React.Component {
       ]
     }, {
       company: 'InnoVint',
-      title: 'Software Test Engineer',
+      title: 'Software Engineer in Test',
       totalDuration: '(1 year and 3 months)',
       monthRange: 'Jan 2015 – Mar 2016',
       workType: 'Remote',
       contributions: [
-        'Designed, built and automated end user tests.',
+        // 'Designed, built and automated end user tests.',
       ],
       technologies: [
         'js', 'node', 'protractor', 'jasmine',
@@ -295,16 +322,16 @@ class Career extends React.Component {
       ]
     }, {
       company: 'Black Marlin Data Corp',
-      title: 'Software Engineer',
+      title: 'Senior Software Engineer',
       totalDuration: '(2 years)',
       monthRange: 'Apr 2012 –Mar 2014',
       workType: 'Office Based',
       contributions: [
-        'Designed, built and refactored features for existing web and mobile application.',
-        'Ensured that deliverables are always addressed even if deadline is very tight.',
-        'Helped launched hybrid mobile application after 8 months on the project. Mobile application generated ~$250k revenue during the first month. Management team members got promotions on the next month.',
-        'Improved overall code performance which reduced average page load time from 3~8 minutes to 2~5 seconds.',
-        'Constantly improved existing application by suggesting new ideas, testing out new technologies and prototyping new solutions. New and some existing projects then implemented AngularJS, as a front end framework choice.'
+        // 'Designed, built and refactored features for existing web and mobile application.',
+        // 'Ensured that deliverables are always addressed even if deadline is very tight.',
+        // 'Helped launched hybrid mobile application after 8 months on the project. Mobile application generated ~$250k revenue during the first month. Management team members got promotions on the next month.',
+        // 'Improved overall code performance which reduced average page load time from 3~8 minutes to 2~5 seconds.',
+        // 'Constantly improved existing application by suggesting new ideas, testing out new technologies and prototyping new solutions. New and some existing projects then implemented AngularJS, as a front end framework choice.'
       ],
       technologies: [
         'js', 'git', 'angular', 'bower',
@@ -318,7 +345,7 @@ class Career extends React.Component {
       monthRange: 'Mar 2011 – Apr 2012',
       workType: 'Remote',
       contributions: [
-        'Fixed bugs, built and integrated new features for existing web and mobile application.'
+        // 'Fixed bugs, built and integrated new features for existing web and mobile application.'
       ],
       technologies: [
         'java', 'js', 'git', 'spring', 
@@ -331,8 +358,8 @@ class Career extends React.Component {
       monthRange: 'May 2009 – Mar 2011',
       workType: 'Remote',
       contributions: [
-        'Independently designed, built and deployed web applications.',
-        'Constantly managed expectations from product owner.'
+        // 'Independently designed, built and deployed web applications.',
+        // 'Constantly managed expectations from product owner.'
       ],
       technologies: [
         'java', 'js', 'git', 'spring', 
@@ -346,8 +373,8 @@ class Career extends React.Component {
       monthRange: 'Mar 2009 – Jun 2010',
       workType: 'Office Based',
       contributions: [
-        'Designed, built and integrated features for new and existing web applications.',
-        'Ensured that deliverables are always addressed even if deadline is tight.'
+        // 'Designed, built and integrated features for new and existing web applications.',
+        // 'Ensured that deliverables are always addressed even if deadline is tight.'
       ],
       technologies: [
         'java', 'js', 'git', 'spring', 
@@ -356,7 +383,7 @@ class Career extends React.Component {
       ]
     }, {
       company: 'IVANT Technologies',
-      title: 'J2EE Consultant',
+      title: 'Junior Software Engineer',
       totalDuration: '(3 months)',
       monthRange: 'Jan 2009 – Mar 2009',
       workType: 'Office Based',
@@ -368,12 +395,12 @@ class Career extends React.Component {
       ]
     }, {
       company: 'Azeus Systems Philippines',
-      title: 'Junior Associate',
+      title: 'Junior Software Engineer',
       totalDuration: '(7 months)',
       monthRange: 'Jun 2008 – Dec 2008',
       workType: 'Office Based',
       contributions: [
-        'Helped company cut cost by developing a database synchronization tool for remote and local databases, along with another developer.'
+        // 'Helped company cut cost by developing a database synchronization tool for remote and local databases, along with another developer.'
       ],
       technologies: [
         'java', 'js', 'scriptaculous',
@@ -381,14 +408,14 @@ class Career extends React.Component {
       ]
     }, {
       company: 'Alarius Systems LLC',
-      title: 'Junior J2EE Developer',
+      title: 'Junior Software Engineer',
       totalDuration: '(1 year and 1 month)',
       monthRange: 'Jan 2006 – Feb 2007',
       workType: 'Office Based',
       contributions: [
-        'Designed, built, integrated and deployed J2EE applications.',
-        'Optimized subroutines to improve performance of projects by 20% to 50%.',
-        'Reviewed codes, fixed bugs, improved documentation and code on a daily basis, along with two other developers.'
+        // 'Designed, built, integrated and deployed J2EE applications.',
+        // 'Optimized subroutines to improve performance of projects by 20% to 50%.',
+        // 'Reviewed codes, fixed bugs, improved documentation and code on a daily basis, along with two other developers.'
       ],
       technologies: [
         'java', 'struts', 'subversion'
@@ -400,8 +427,8 @@ class Career extends React.Component {
       monthRange: 'Jun 2004 - Present',
       workType: 'Office Based',
       contributions: [
-        'Created / Sold / Assisted classmates, schoolmates, other university students, local politicians, startup founders and other product owners in their web and desktop software projects.',
-        'Handled local and international clients.',
+        // 'Created / Sold / Assisted classmates, schoolmates, other university students, local politicians, startup founders and other product owners in their web and desktop software projects.',
+        // 'Handled local and international clients.',
       ],
       technologies: [
         'js', 'node', 'protractor', 'webdriver', 'jasmine', 'mocha', 'mongo',
@@ -445,7 +472,11 @@ class Career extends React.Component {
                         <br />
                         <span style={{color: '#979898', fontSize: '12px'}}>{careerItem.workType}</span>
                       </div>
-                      <div className="tl-icon btn-icon-round btn-icon btn-icon-thin btn-info"><i className="material-icons">camera</i></div>
+                      <div className="tl-icon btn-icon-round btn-icon btn-icon-thin btn-info">
+                        <i className="material-icons">
+                          { careerItem.workType === 'Remote' ? 'home' : 'directions_walk' }
+                        </i>
+                      </div>
                       <div className="tl-content">
                         <h4 className="tl-tile text-primary" style={{marginTop: 'unset'}}>
                           <strong>{careerItem.title}</strong>

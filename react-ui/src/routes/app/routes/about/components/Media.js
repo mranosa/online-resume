@@ -23,11 +23,6 @@ function SimpleMediaCard(props) {
   return (
     <div>
       <Card className={classes.card}>
-        <CardMedia
-          className={classes.media}
-          image="assets/images/me.jpg"
-          style={{ minHeight: '320px' }}
-        />
         <CardContent>
           <Typography style={{'font-size':'19px'}} gutterBottom variant="headline" component="h5">
             Mark Kenneth Ranosa
